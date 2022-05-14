@@ -4,18 +4,18 @@
     :style="{ background: $vuetify.theme.themes.dark.background }"
   >
     <nav-bar />
-    <v-container fluid>
-      <v-row>
-        <v-col cols="6">
+    <v-container>
+      <v-row justify="center" align="center">
+        <v-col cols="12" sm="6" class="d-flex child-flex">
           <v-img
             src="muluken.jpg"
             contain
-            max-height="500"
+            height="400"
             style="filter: brightness(0.8)"
           ></v-img>
         </v-col>
-        <v-col cols="6">
-          <h5 class="red--text text--darken-4 top title">Hello, I'm Muluken</h5>
+        <v-col cols="12" sm="6" class="text-sm-left text-center">
+          <h5 class="red--text text--darken-4 title">Hello, I'm Muluken</h5>
           <h1 class="white--text mt-1">Software Engineer</h1>
           <p class="grey--text">
             A full-stack developer specializing in Vue.js, Node.js, Express.js,
@@ -35,24 +35,13 @@
               }}</v-icon>
             </a>
           </v-btn>
-          <!-- <v-btn
-            class="text-left"
-            icon
-          >
-            <a :href="'icon.link'" target="_blank" rel="noopener noreferrer">
-              <v-icon size="24px" color="red" class="text-left">{{
-                'fa fa-envelope'
-              }}</v-icon>
-              Download Resume
-            </a>
-          </v-btn> -->
           <div>
             <a
               href="https://github.com/mulukenrock/files/blob/main/muluken-cv-small.pdf"
               target="_blank"
               rel="cv"
             >
-              <v-btn rounded color="#a7121d" dark @click="download">
+              <v-btn rounded color="#a7121d" dark>
                 <v-icon size="20px" color="white" class="text-left mr-3">{{
                   "fa fa-envelope"
                 }}</v-icon>
@@ -63,8 +52,15 @@
         </v-col>
         <v-col cols="12" class="padd" id="abt">
           <div id="about">
-            <v-col md="6" offset-md="3">
-              <h4 class="white--text">About Me</h4>
+            <v-col
+              cols="12"
+              md="8"
+              lg="6"
+              offset-md="2"
+              offset-lg="3"
+              class="text-left px-8 px-md-0"
+            >
+              <h4 class="white--text mb-3">About Me</h4>
               <p class="grey--text">
                 I'm highly motivated, and I enjoy problem-solving and logical
                 thinking. I'm good at collaboration & teamwork, creativity,
@@ -77,8 +73,8 @@
           </div>
           <div id="education">
             <v-row justify="center">
-              <v-col cols="6">
-                <h4 class="white--text">Education</h4>
+              <v-col cols="12" md="8" lg="6" class="px-10 px-md-2">
+                <h4 class="white--text text-left">Education</h4>
                 <v-timeline align-top dense reverse>
                   <v-timeline-item
                     v-for="(item, i) in items"
@@ -130,8 +126,10 @@
           </div>
           <div id="experience">
             <v-row class="timeline-top" align="center" justify="center">
-              <v-col cols="6">
-                <h4 class="white--text my-2 mb-6">Experience / Projects</h4>
+              <v-col cols="12" md="8" lg="6" class="px-10 px-md-2">
+                <h4 class="white--text my-2 mb-6 text-left"
+
+                >Experience / Projects</h4>
                 <div class="timeline">
                   <vue-timeline-update
                     :date="new Date('2022-04-05')"
@@ -418,6 +416,14 @@ export default {
         {
           image: "fa fa-envelope",
           link: "mailto: mulukenrock@gmail.com",
+        },
+        {
+          image: "fab fa-github",
+          link: "https://github.com/mulukenrock",
+        },
+        {
+          image: "fab fa-stack-overflow",
+          link: "https://stackoverflow.com/users/14529454/ambassel",
         },
       ],
       items: [
