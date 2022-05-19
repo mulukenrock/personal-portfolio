@@ -14,6 +14,10 @@
             <v-btn icon>
               <v-icon color="#A7121D">fas fa-sun</v-icon>
             </v-btn>
+            Total Visits:
+            <span class="font-weight-bold">
+              {{ visits }}
+            </span>
           </v-card-text>
         </v-col>
 
@@ -45,7 +49,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    visits: {
+      type: Number,
+      default: 10
+    }
+  }
+};
 </script>
 
 <style></style>

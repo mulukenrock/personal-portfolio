@@ -127,9 +127,9 @@
           <div id="experience">
             <v-row class="timeline-top" align="center" justify="center">
               <v-col cols="12" md="8" lg="6" class="px-10 px-md-2">
-                <h4 class="white--text my-2 mb-6 text-left"
-
-                >Experience / Projects</h4>
+                <h4 class="white--text my-2 mb-6 text-left">
+                  Experience / Projects
+                </h4>
                 <div class="timeline">
                   <vue-timeline-update
                     :date="new Date('2022-04-05')"
@@ -386,7 +386,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <Footer />
+    <Footer :visits="visits" />
   </v-app>
 </template>
 
@@ -396,11 +396,31 @@ import Footer from "../components/Footer.vue";
 import Logo from "../components/Logo";
 
 export default {
+  metaInfo: {
+    titleTemplate: "Muluken Getachew %s",
+    htmlAttrs: {
+      lang: "en",
+      amp: true,
+    },
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "description",
+        content:
+          "Muluken Getachew, software enginner, portfolio site, personal website",
+      },
+    ],
+  },
   name: "Home",
   components: {
     NavBar,
     Footer,
     Logo,
+  },
+  created() {
+    this.post_visit();
+    this.get_visits();
   },
   data() {
     return {
@@ -434,7 +454,34 @@ export default {
           year: 2019,
         },
       ],
+      visits: 10,
     };
+  },
+  methods: {
+    async post_visit() {
+      try {
+        await fetch(`${process.env.VUE_APP_VISIT_URL}/count`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            input: {
+              page: "HOME",
+            },
+          }),
+        });
+      } catch (e) {
+        return;
+      }
+    },
+    async get_visits() {
+      try {
+        let resp = await fetch(`${process.env.VUE_APP_VISIT_URL}/visits`);
+        let res = await resp.json();
+        if (res && res.total) this.visits = res.total;
+      } catch (e) {
+        return;
+      }
+    },
   },
 };
 </script>
