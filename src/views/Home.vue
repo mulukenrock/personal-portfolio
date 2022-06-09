@@ -6,20 +6,22 @@
     <nav-bar />
     <v-container>
       <v-row justify="center" align="center">
-        <v-col cols="12" sm="6" class="d-flex child-flex">
+        <v-col cols="12" sm="4" class="d-flex child-flex">
           <v-img
-            src="muluken.jpg"
+            src="muluken-getachew.png"
             contain
             height="400"
-            style="filter: brightness(0.8)"
+            class="normalpic"
+            alt="Muluken Getachew"
           ></v-img>
         </v-col>
-        <v-col cols="12" sm="6" class="text-sm-left text-center">
-          <h5 class="red--text text--darken-4 title">Hello, I'm Muluken</h5>
+        <v-col cols="12" sm="3" class="text-sm-left text-center">
+          <h5 class="red--text text--darken-1 title">Hello, I'm Muluken</h5>
           <h1 class="white--text mt-1">Software Engineer</h1>
           <p class="grey--text">
             A full-stack developer specializing in Vue.js, Node.js, Express.js,
-            HASURA, and Nuxt.js
+            HASURA, and Nuxt.js!
+            <br />
             <br />
             With 3+ years of overall experience.
           </p>
@@ -386,7 +388,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <Footer :visits="visits" />
+    <Footer />
   </v-app>
 </template>
 
@@ -420,7 +422,6 @@ export default {
   },
   created() {
     this.post_visit();
-    this.get_visits();
   },
   data() {
     return {
@@ -454,7 +455,6 @@ export default {
           year: 2019,
         },
       ],
-      visits: 10,
     };
   },
   methods: {
@@ -469,15 +469,6 @@ export default {
             },
           }),
         });
-      } catch (e) {
-        return;
-      }
-    },
-    async get_visits() {
-      try {
-        let resp = await fetch(`${process.env.VUE_APP_VISIT_URL}/visits`);
-        let res = await resp.json();
-        if (res && res.total) this.visits = res.total;
       } catch (e) {
         return;
       }
@@ -583,5 +574,8 @@ h1.number {
 
 a {
   text-decoration: none;
+}
+.normalpic {
+  filter: opacity(0.9) drop-shadow(0 0 0 #111);
 }
 </style>
