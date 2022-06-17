@@ -5,7 +5,9 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import VueTimeline from "@growthbunker/vuetimeline";
 import VueMeta from 'vue-meta'
+import VueTyper from "vue-typer";
 
+Vue.use(VueTyper);
 Vue.use(VueTimeline);
  
 Vue.use(VueMeta, {

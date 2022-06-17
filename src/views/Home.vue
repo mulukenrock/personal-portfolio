@@ -16,14 +16,15 @@
           ></v-img>
         </v-col>
         <v-col cols="12" sm="3" class="text-sm-left text-center">
-          <h5 class="red--text text--darken-1 title">Hello, I'm Muluken</h5>
-          <h1 class="white--text mt-1">Software Engineer</h1>
+          <h5 class="red--text text--darken-1 title font-weight-bold">Hey, I'm Muluken</h5>
+          <!-- <h1 class="white--text mt-1">Software Engineer</h1> -->
+          <vue-typer :text="['Software Engineer', 'Full-stack Developer', 'Tech Enthusiast']" :shuffle="true" eraseStyle="backspace" eraseDelay="20"></vue-typer>
           <p class="grey--text">
             A full-stack developer specializing in Vue.js, Node.js, Express.js,
             HASURA, and Nuxt.js!
             <br />
             <br />
-            With 3+ years of overall experience.
+            4 years of overall experience!
           </p>
           <v-btn
             v-for="(icon, index) in icons"
@@ -325,9 +326,9 @@
             </v-row>
           </div>
           <div id="tools">
-            <v-row align="center" justify="center">
+            <v-row align="center" justify="center" class="mx-1">
               <v-col cols="12">
-                <h4 class="white--text my-2 mt-6 text-center">Tools I use</h4>
+                <h4 class="white--text my-2 mt-6 text-center">Programming Languages / Tools</h4>
               </v-col>
               <Logo
                 src="https://img.icons8.com/color/96/000000/vue-js.png"
@@ -362,6 +363,7 @@
                 src="https://img.icons8.com/fluency/96/000000/docker.png"
                 name="Docker"
               />
+              <Logo :customStyle="{background: '#fff'}" src="expressjs-icon.png" name="Express" />
               <Logo
                 src="https://img.icons8.com/color/96/000000/javascript.png"
                 name="JavaScript"
@@ -383,6 +385,10 @@
                 name="CSS"
               />
               <Logo src="tailwindcss.png" name="Tailwind CSS" />
+              <Logo src="https://img.icons8.com/color/96/000000/heroku.png" name="Heroku" />
+              <Logo src="netlify.png" name="Netlify" />
+              <Logo src="https://img.icons8.com/color/96/000000/gitlab.png" name="Gitlab" />
+              <Logo :customStyle="{background: '#fff'}" src="github.png" name="Github" />
             </v-row>
           </div>
         </v-col>
@@ -577,5 +583,23 @@ a {
 }
 .normalpic {
   filter: opacity(0.9) drop-shadow(0 0 0 #111);
+}
+</style>
+
+<style>
+.vue-typer {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+.vue-typer .custom.char {
+  color: #84a1ff;
+}
+.vue-typer .custom.char.selected {
+  color: #a7121d;
+}
+.vue-typer .custom.caret {
+  width: 1.5px;
+  background-color: #fff;
 }
 </style>

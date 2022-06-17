@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="src" class="logo-img" />
+    <img :src="src" class="logo-img" :style="customStyle" />
     <p class="logo-name grey--text text-center">{{ name }}</p>
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
   data: () => ({}),
-  props: ["src", "name"]
+  props: ["src", "name", "customStyle"]
 };
 </script>
 
