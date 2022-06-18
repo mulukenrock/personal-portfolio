@@ -6,7 +6,12 @@
     <nav-bar />
     <v-container>
       <v-row justify="center" align="center">
-        <v-col cols="12" sm="5" md="4" class="d-flex child-flex pa-3 pa-sm-0 pa-md-3">
+        <v-col
+          cols="12"
+          sm="5"
+          md="4"
+          class="d-flex child-flex pa-3 pa-sm-0 pa-md-3"
+        >
           <v-img
             src="muluken-getachew.png"
             contain
@@ -15,13 +20,19 @@
             alt="Muluken Getachew"
           ></v-img>
         </v-col>
-        <v-col cols="12" sm="6" md="5" lg="4" class="text-sm-left text-center px-3 px-sm-0 px-md-3">
+        <v-col
+          cols="12"
+          sm="6"
+          md="5"
+          lg="4"
+          class="text-sm-left text-center px-3 px-sm-0 px-md-3"
+        >
           <h5 class="red--text text--darken-1 title font-weight-bold">
             Hey, I'm Muluken
           </h5>
           <vue-typer
             :text="[
-              $vuetify.breakpoint.xs ? 'Software Engr':'Software Engineer',
+              $vuetify.breakpoint.xs ? 'Software Engr' : 'Software Engineer',
               $vuetify.breakpoint.xs ? 'Fullstack dev' : 'Fullstack Developer',
               'Tech Enthusiast',
             ]"
@@ -62,11 +73,7 @@
             </v-tooltip>
           </v-btn>
           <div>
-            <a
-              href="https://github.com/mulukenrock/files/blob/main/muluken-cv-small.pdf"
-              target="_blank"
-              rel="cv"
-            >
+            <a :href="cv" target="_blank" rel="cv">
               <v-btn rounded color="#a7121d" dark>
                 <v-icon size="20px" color="white" class="text-left mr-3">{{
                   "fa fa-envelope"
@@ -470,6 +477,7 @@ export default {
   },
   data() {
     return {
+      cv: process.env.VUE_APP_CV_URL,
       icons: [
         {
           name: "Telegram",
