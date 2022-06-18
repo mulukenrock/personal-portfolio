@@ -6,31 +6,31 @@
     <nav-bar />
     <v-container>
       <v-row justify="center" align="center">
-        <v-col cols="12" sm="4" class="d-flex child-flex">
+        <v-col cols="12" sm="5" md="4" class="d-flex child-flex pa-3 pa-sm-0 pa-md-3">
           <v-img
             src="muluken-getachew.png"
             contain
-            height="400"
+            :height="$vuetify.breakpoint.mdAndDown ? 300 : 400"
             class="normalpic"
             alt="Muluken Getachew"
           ></v-img>
         </v-col>
-        <v-col cols="12" sm="3" class="text-sm-left text-center">
+        <v-col cols="12" sm="6" md="5" lg="4" class="text-sm-left text-center px-3 px-sm-0 px-md-3">
           <h5 class="red--text text--darken-1 title font-weight-bold">
             Hey, I'm Muluken
           </h5>
           <vue-typer
             :text="[
-              'Software Engineer',
-              'Full-stack Developer',
+              $vuetify.breakpoint.xs ? 'Software Engr':'Software Engineer',
+              $vuetify.breakpoint.xs ? 'Fullstack dev' : 'Fullstack Developer',
               'Tech Enthusiast',
             ]"
             :shuffle="true"
             eraseStyle="backspace"
-            eraseDelay="20"
+            :eraseDelay="20"
           ></vue-typer>
-          <p class="grey--text">
-            A full-stack developer specializing in Vue.js, Node.js, Express.js,
+          <p class="grey--text pr-lg-15">
+            A fullstack developer specializing in Vue.js, Node.js, Express.js,
             HASURA, and Nuxt.js!
             <br />
             <br />
@@ -634,7 +634,7 @@ a {
 .vue-typer {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 30px;
 }
 .vue-typer .custom.char {
   color: #84a1ff;
