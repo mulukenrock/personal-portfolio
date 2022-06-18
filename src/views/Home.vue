@@ -6,21 +6,31 @@
     <nav-bar />
     <v-container>
       <v-row justify="center" align="center">
-        <v-col cols="12" sm="4" class="d-flex child-flex">
+        <v-col cols="12" sm="5" md="4" class="d-flex child-flex pa-3 pa-sm-0 pa-md-3">
           <v-img
             src="muluken-getachew.png"
             contain
-            height="400"
+            :height="$vuetify.breakpoint.mdAndDown ? 300 : 400"
             class="normalpic"
             alt="Muluken Getachew"
           ></v-img>
         </v-col>
-        <v-col cols="12" sm="3" class="text-sm-left text-center">
-          <h5 class="red--text text--darken-1 title font-weight-bold">Hey, I'm Muluken</h5>
-          <!-- <h1 class="white--text mt-1">Software Engineer</h1> -->
-          <vue-typer :text="['Software Engineer', 'Full-stack Developer', 'Tech Enthusiast']" :shuffle="true" eraseStyle="backspace" eraseDelay="20"></vue-typer>
-          <p class="grey--text">
-            A full-stack developer specializing in Vue.js, Node.js, Express.js,
+        <v-col cols="12" sm="6" md="5" lg="4" class="text-sm-left text-center px-3 px-sm-0 px-md-3">
+          <h5 class="red--text text--darken-1 title font-weight-bold">
+            Hey, I'm Muluken
+          </h5>
+          <vue-typer
+            :text="[
+              $vuetify.breakpoint.xs ? 'Software Engr':'Software Engineer',
+              $vuetify.breakpoint.xs ? 'Fullstack dev' : 'Fullstack Developer',
+              'Tech Enthusiast',
+            ]"
+            :shuffle="true"
+            eraseStyle="backspace"
+            :eraseDelay="20"
+          ></vue-typer>
+          <p class="grey--text pr-lg-15">
+            A fullstack developer specializing in Vue.js, Node.js, Express.js,
             HASURA, and Nuxt.js!
             <br />
             <br />
@@ -32,11 +42,24 @@
             class="mr-4 text-left mb-4"
             icon
           >
-            <a :href="icon.link" target="_blank" rel="noopener noreferrer">
-              <v-icon size="24px" color="red" class="text-left">{{
-                icon.image
-              }}</v-icon>
-            </a>
+            <v-tooltip
+              bottom
+              color="white"
+              content-class="font-weight-bold red--text"
+            >
+              <template v-slot:activator="{ on }">
+                <a :href="icon.link" target="_blank" rel="noopener noreferrer">
+                  <v-icon
+                    v-on="on"
+                    size="24px"
+                    color="red"
+                    class="text-left zoom"
+                    >{{ icon.image }}</v-icon
+                  >
+                </a>
+              </template>
+              <span>{{ icon.name }}</span>
+            </v-tooltip>
           </v-btn>
           <div>
             <a
@@ -328,7 +351,9 @@
           <div id="tools">
             <v-row align="center" justify="center" class="mx-1">
               <v-col cols="12">
-                <h4 class="white--text my-2 mt-6 text-center">Programming Languages / Tools</h4>
+                <h4 class="white--text my-2 mt-6 text-center">
+                  Programming Languages / Tools
+                </h4>
               </v-col>
               <Logo
                 src="https://img.icons8.com/color/96/000000/vue-js.png"
@@ -363,7 +388,11 @@
                 src="https://img.icons8.com/fluency/96/000000/docker.png"
                 name="Docker"
               />
-              <Logo :customStyle="{background: '#fff'}" src="expressjs-icon.png" name="Express" />
+              <Logo
+                :customStyle="{ background: '#fff' }"
+                src="expressjs-icon.png"
+                name="Express"
+              />
               <Logo
                 src="https://img.icons8.com/color/96/000000/javascript.png"
                 name="JavaScript"
@@ -385,10 +414,20 @@
                 name="CSS"
               />
               <Logo src="tailwindcss.png" name="Tailwind CSS" />
-              <Logo src="https://img.icons8.com/color/96/000000/heroku.png" name="Heroku" />
+              <Logo
+                src="https://img.icons8.com/color/96/000000/heroku.png"
+                name="Heroku"
+              />
               <Logo src="netlify.png" name="Netlify" />
-              <Logo src="https://img.icons8.com/color/96/000000/gitlab.png" name="Gitlab" />
-              <Logo :customStyle="{background: '#fff'}" src="github.png" name="Github" />
+              <Logo
+                src="https://img.icons8.com/color/96/000000/gitlab.png"
+                name="Gitlab"
+              />
+              <Logo
+                :customStyle="{ background: '#fff' }"
+                src="github.png"
+                name="Github"
+              />
             </v-row>
           </div>
         </v-col>
@@ -433,22 +472,27 @@ export default {
     return {
       icons: [
         {
+          name: "Telegram",
           image: "fab fa-telegram",
           link: "https://t.me/getMuluqen",
         },
         {
+          name: "Linked In",
           image: "fab fa-linkedin",
           link: "https://www.linkedin.com/in/mulukenrock/",
         },
         {
+          name: "Email",
           image: "fa fa-envelope",
           link: "mailto: mulukenrock@gmail.com",
         },
         {
+          name: "Github",
           image: "fab fa-github",
           link: "https://github.com/mulukenrock",
         },
         {
+          name: "Stack Overflow",
           image: "fab fa-stack-overflow",
           link: "https://stackoverflow.com/users/14529454/ambassel",
         },
@@ -588,9 +632,9 @@ a {
 
 <style>
 .vue-typer {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 30px;
 }
 .vue-typer .custom.char {
   color: #84a1ff;
@@ -601,5 +645,9 @@ a {
 .vue-typer .custom.caret {
   width: 1.5px;
   background-color: #fff;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
 }
 </style>
