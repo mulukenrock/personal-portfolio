@@ -165,7 +165,7 @@
                 </h4>
                 <div class="timeline">
                   <vue-timeline-update
-                    :date="new Date('2022-04-05')"
+                    :date="new Date('2021-05-10')"
                     title="Senior Software Engineer"
                     :description="`
                       <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
@@ -236,10 +236,10 @@
                     :thumbnail="'gebere.png'"
                   />
                   <vue-timeline-update
-                    :date="new Date('2022-04-01')"
+                    :date="new Date('2021-05-22')"
                     title="Senior Backend Developer"
                     :description="`
-                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
+                      <a target='_blank' alt='Ekub' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #a7121d'>Company: Ekub Inc.</b>
                       </a>
                       <br />
@@ -264,7 +264,7 @@
                     :thumbnail="'ekub.png'"
                   />
                   <vue-timeline-update
-                    :date="new Date('2021-05-01')"
+                    :date="new Date('2019-09-11')"
                     title="Full-stack Developer"
                     :description="`
                       <a target='_blank' alt='Minab Tech' rel='noopener noreferrer' style='text-decoration: none'>
@@ -326,7 +326,7 @@
                     :thumbnail="'minab.png'"
                   />
                   <vue-timeline-update
-                    :date="new Date('2018-11-01')"
+                    :date="new Date('2018-06-20')"
                     title="Full-stack Developer"
                     :description="`
                       <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
