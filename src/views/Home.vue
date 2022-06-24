@@ -285,6 +285,21 @@
                       <li>#Vue.js #Node.js #Nuxt.js #PostgreSQL #GraphQL #Hasura #Express.js</li>
                       <br />
                       <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
+                        <b style='color: #e2e2e2'>#Project: Website for Habesha Entrepreneurs credit and saving Association</b> 
+                      </a>
+                      <ul style='color: grey'>
+                        <b>December 2020 - March 2021</b>
+                        <li>Habesha Entrepreneurs credit and saving Association (SACCO) is established to narrow the financial gap of SME entrepreneurs, create market linkage, and shorten unnecessary market chains.</li>
+                        <li>Output - The company was able to register more members using the website and grow!</li>
+                        <li>
+                          <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none' href='https://habeshaentreprenurssacco.com/'>
+                            Link: https://habeshaentreprenurssacco.com/
+                          </a>
+                        </li>
+                      </ul>
+                      <li>#Vue.js #Nuxt.js #GraphQL #Hasura</li>
+                      <br />
+                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #e2e2e2'>#Project: Hahujobs University</b> 
                       </a>
                       <ul style='color: grey'>
@@ -305,21 +320,6 @@
                         <li>They were also able to eliminate erroneous manual work as the system will do it for them - for example, calculating salaries of employees according to their attendance and paid/unpaid leaves.</li>
                       </ul>
                       <li>#Vue.js #Node.js #Loopback.js #MongoDB</li>
-                      <br />
-                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
-                        <b style='color: #e2e2e2'>#Project: Website for Habesha Entrepreneurs credit and saving Association</b> 
-                      </a>
-                      <ul style='color: grey'>
-                        <b>December 2020 - March 2021</b>
-                        <li>Habesha Entrepreneurs credit and saving Association (SACCO) is established to narrow the financial gap of SME entrepreneurs, create market linkage, and shorten unnecessary market chains.</li>
-                        <li>Output - The company was able to register more members using the website and grow!</li>
-                        <li>
-                          <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none' href='https://habeshaentreprenurssacco.com/'>
-                            Link: https://habeshaentreprenurssacco.com/
-                          </a>
-                        </li>
-                      </ul>
-                      <li>#Vue.js #Nuxt.js #GraphQL #Hasura</li>
                       `"
                     icon="code"
                     color="red"
