@@ -25,24 +25,23 @@ export default {
   --timeline-years: darkblue;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 3px grey;
-  border-radius: 5px;
-  background: #f1f1f1;
+  box-shadow: inset 0 0 6px #a7121d;
+  background: #111;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #aaa;
   border-radius: 5px;
+  background-color: #a7121d;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #888;
+  background: #e10531;
 }
 </style>
