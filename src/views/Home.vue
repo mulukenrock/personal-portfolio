@@ -10,7 +10,7 @@
           cols="12"
           sm="5"
           md="4"
-          class="d-flex child-flex pa-3 pa-sm-0 pa-md-3"
+          class="d-flex child-flex pa-sm-3 pa-sm-3 pa-md-3"
         >
           <v-img
             src="muluken-getachew.png"
@@ -18,7 +18,16 @@
             :height="$vuetify.breakpoint.mdAndDown ? 300 : 400"
             class="normalpic"
             alt="Muluken Getachew"
-          ></v-img>
+          >
+            <template v-slot:placeholder>
+              <v-skeleton-loader
+                class="mx-auto"
+                type="image"
+                max-width="450"
+                :dark="false"
+              ></v-skeleton-loader>
+            </template>
+          </v-img>
         </v-col>
         <v-col
           cols="12"
@@ -657,5 +666,10 @@ a {
 
 .zoom:hover {
   transform: scale(1.5);
+}
+
+div.v-image__placeholder > div > div {
+  height: 400px;
+  border-radius: 10px;
 }
 </style>
