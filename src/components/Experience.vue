@@ -21,11 +21,9 @@
                         <li>Orbit 2.0 is a health care management system that automates almost every action of a healthcare facility.</li>
                         <li>It's a very big project and has 6 modules, namely:
                           <ul>
-                            <li>authentication - user signup, sign in, roles, permissions, etc </li>
-                            <li>setting - all settings of the system </li>
+                            <li>Authentication and Setting - user signup, sign in, roles, permissions, settings, etc </li>
                             <li>Patient - appointment, triage, MCH, admissions, etc </li>
-                            <li>Laboratory - tests, orders, results, reports, etc </li>
-                            <li>Imaging - tests, orders, results, reports, etc </li>
+                            <li>Laboratory and Imaging - tests, orders, results, reports, etc </li>
                             <li>Pharmacy - prescriptions, dispenses, inventory, reports. etc </li>
                             <li>Finance - invoices, finance-groups, deposits, reports, etc </li>
                           </ul>
@@ -89,11 +87,10 @@
                       <ul style='color: grey'>
                         <b>May 2021 - Present</b>
                         <li>Ekub is an Ethiopian ROSCA(rotating savings and credit association) system. </li>
-                        <li>It has specific rules and guidelines.</li> 
-                        <li>People will gather in groups to save money weekly, monthly, or annually.</li> 
+                        <li>It has specific rules and guidelines. People will gather in groups to save money weekly, monthly, or annually.</li> 
                         <li>There's a lot drawn on specific dates and it will be allotted to one of the group members.</li>
                         <li>You can also borrow from the Ekub in case of emergency.</li>
-                        <li>We have tried to automate the process and eliminate any paperwork.</li>
+                        <li>We have automated the process and eliminated paperworks.</li>
                       </ul>
                       <li>#Node.js #GraphQL #Express.js</li>
                       `"
