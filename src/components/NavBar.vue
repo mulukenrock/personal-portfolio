@@ -62,8 +62,8 @@ export default {
     };
   },
   methods: {
-    scroll(refName) {
-      const element = document.getElementById(refName);
+    scroll(id) {
+      const element = document.getElementById(id);
       let pos = element.style.position;
       let top = element.style.top;
       element.style.position = "relative";
