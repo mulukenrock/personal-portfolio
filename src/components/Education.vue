@@ -65,3 +65,8 @@ export default {
   },
 };
 </script>
+<style>
+.theme--light.v-timeline:before {
+  background: #a7121d;
+}
+</style>
