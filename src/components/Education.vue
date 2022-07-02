@@ -1,7 +1,7 @@
 <template>
   <div id="education">
     <v-row justify="center">
-      <v-col cols="12" md="8" lg="6" class="px-10 px-md-2">
+      <v-col cols="12" md="8" lg="8" class="px-8 pr-0 px-sm-10 px-md-2 px-lg-10">
         <h4 class="white--text text-left">Education</h4>
         <v-timeline align-top dense reverse>
           <v-timeline-item
@@ -65,8 +65,8 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .theme--light.v-timeline:before {
-  background: #a7121d;
+  background: #a7121d !important;
 }
 </style>

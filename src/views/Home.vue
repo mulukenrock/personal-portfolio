@@ -79,7 +79,6 @@ export default {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
       let scrolled = (scrollPos / height) * 100;
-      console.log(scrolled, " sccc");
       this.progressPercent = `${scrolled}%`;
     },
     async post_visit() {

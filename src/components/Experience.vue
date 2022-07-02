@@ -1,13 +1,40 @@
 <template>
   <div id="experience">
     <v-row class="timeline-top" align="center" justify="center">
-      <v-col cols="12" md="8" lg="6" class="px-10 px-md-2">
+      <v-col cols="12" md="8" lg="8" class="px-8 px-sm-10 px-md-2 px-lg-10">
         <h4 class="white--text my-2 mb-6 text-left">Experience / Projects</h4>
         <div class="timeline">
           <vue-timeline-update
-            :date="new Date('2021-05-10')"
-            title="Senior Software Engineer"
-            :description="`
+            v-for="(experience, index) in experiences"
+            :key="index"
+            @click="experience.show = !experience.show"
+            :date="experience.date"
+            :title="experience.show ? experience.titleUp : experience.titleDown"
+            :description="experience.show ? experience.description : null"
+            icon="code"
+            color="red"
+            :thumbnail="experience.thumbnail"
+            :is-last="experience.is_last"
+            :category="experience.category"
+          />
+        </div>
+      </v-col>
+    </v-row>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      experiences: [
+        {
+          titleUp:
+            "Senior Software Engineer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Senior Software Engineer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2021-05-10"),
+          description: `
                       <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #a7121d'>Company: Orbit Inc.</b>
                       </a>
@@ -40,18 +67,20 @@
                         <b>December 2021 - Present</b>
                         <li>It's the cloud-ready version of orbit 2.0. </li>
                         <li>Whichever healthcare facility residing anywhere in the world can use this app on the cloud.</li>
-                        <li>When it's finished we are hoping to accept clients from all over the world, not just Ethiopia.</li>
                       </ul>
-                      <li>#Vue.js #Node.js #Nuxt.js #GraphQL #Jira #ApolloClient #JWT #PostgreSQL #Express.js </li>
-                      `"
-            icon="code"
-            color="red"
-            :thumbnail="'orbit-health.png'"
-          />
-          <vue-timeline-update
-            :date="new Date('2022-03-01')"
-            title="Front End Developer"
-            :description="`
+                      `,
+          show: true,
+          is_last: false,
+          thumbnail: "orbit-health.png",
+          category: "Current",
+        },
+        {
+          titleUp:
+            "Front End Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Front End Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2022-03-01"),
+          description: `
                       <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #a7121d'>Company: Gebere Inc.</b> 
                       </a>
@@ -67,15 +96,18 @@
                         <li>Projects with how much money they need and other details are defined in the admin app and will be accessible to the public via the investor's app. </li>
                       </ul>
                       <li> #Vue.js #Typescript #TailwindCSS </li>
-                      `"
-            icon="code"
-            color="red"
-            :thumbnail="'gebere.png'"
-          />
-          <vue-timeline-update
-            :date="new Date('2021-05-22')"
-            title="Senior Backend Developer"
-            :description="`
+                      `,
+          show: false,
+          is_last: false,
+          thumbnail: "gebere.png",
+        },
+        {
+          titleUp:
+            "Senior Backend Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Senior Backend Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2021-05-22"),
+          description: `
                       <a target='_blank' alt='Ekub' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #a7121d'>Company: Ekub Inc.</b>
                       </a>
@@ -93,15 +125,18 @@
                         <li>We have automated the process and eliminated paperworks.</li>
                       </ul>
                       <li>#Node.js #GraphQL #Express.js</li>
-                      `"
-            icon="code"
-            color="red"
-            :thumbnail="'ekub.png'"
-          />
-          <vue-timeline-update
-            :date="new Date('2019-09-11')"
-            title="Full-stack Developer"
-            :description="`
+                      `,
+          show: false,
+          is_last: false,
+          thumbnail: "ekub.png",
+        },
+        {
+          titleUp:
+            "Full-stack Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Full-stack Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2019-09-11"),
+          description: `
                       <a target='_blank' alt='Minab Tech' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #a7121d'>Company: Minab Tech</b>
                       </a>
@@ -155,15 +190,18 @@
                         <li>They were also able to eliminate erroneous manual work as the system will do it for them - for example, calculating salaries of employees according to their attendance and paid/unpaid leaves.</li>
                       </ul>
                       <li>#Vue.js #Node.js #Loopback.js #MongoDB</li>
-                      `"
-            icon="code"
-            color="red"
-            :thumbnail="'minab.png'"
-          />
-          <vue-timeline-update
-            :date="new Date('2018-06-20')"
-            title="Full-stack Developer"
-            :description="`
+                      `,
+          show: false,
+          is_last: false,
+          thumbnail: "minab.png",
+        },
+        {
+          titleUp:
+            "Full-stack Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Full-stack Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2018-06-20"),
+          description: `
                       <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #a7121d'>Company: Epsilon Technologies</b>
                       </a>
@@ -181,21 +219,13 @@
                         <li>Output - Employers were able to easily post their job vacancies and reach out to job seekers!</li>
                       </ul>
                       <li>#Vue.js #MongoDB #Node.js #Loopback.js #JWT</li>
-                      `"
-            icon="code"
-            color="red"
-            :thumbnail="'epsilon.jpg'"
-          />
-        </div>
-      </v-col>
-    </v-row>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {};
+                      `,
+          show: false,
+          is_last: true,
+          thumbnail: "epsilon.jpg",
+        },
+      ],
+    };
   },
 };
 </script>

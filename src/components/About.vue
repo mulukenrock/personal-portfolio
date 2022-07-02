@@ -3,10 +3,10 @@
     <v-col
       cols="12"
       md="8"
-      lg="6"
+      lg="8"
       offset-md="2"
-      offset-lg="3"
-      class="text-left px-8 px-md-0"
+      offset-lg="2"
+      class="text-left px-5 px-sm-8 px-md-0 px-lg-8"
     >
       <h4 class="white--text mb-3">About Me</h4>
       <p class="grey--text">
@@ -19,3 +19,5 @@
     </v-col>
   </div>
 </template>
+
+<style scoped></style>
