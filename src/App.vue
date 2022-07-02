@@ -44,4 +44,15 @@ export default {
 ::-webkit-scrollbar-thumb:hover {
   background: #e10531;
 }
+/* Fixes white space on the left side - for small devices */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
 </style>
