@@ -124,11 +124,38 @@ export default {
                         <li>You can also borrow from the Ekub in case of emergency.</li>
                         <li>We have automated the process and eliminated paperworks.</li>
                       </ul>
-                      <li>#Node.js #GraphQL #Express.js</li>
+                      <li>#Node.js #GraphQL #Hasura #Express.js</li>
                       `,
           show: false,
           is_last: false,
           thumbnail: "ekub.png",
+        },
+        {
+          titleUp:
+            "Backend Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Backend Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2021-05-22"),
+          description: `
+                      <a target='_blank' alt='Ekub' rel='noopener noreferrer' style='text-decoration: none'>
+                        <b style='color: #a7121d'>Company: Tiyake</b>
+                      </a>
+                      <br />
+                      <br />
+                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
+                        <b style='color: #e2e2e2'>#Project: Tiyake</b> 
+                      </a>
+                      <ul style='color: grey'>
+                        <b>August 2021 - January 2022</b>
+                        <li>Tiyake is a stackoverflow like application where anyone can post questions and people respond to his question</li>
+                        <li>Users can answer, comment, upvote, and downvote questions/answers</li> 
+                        <li>There are special moderators that controls the moral guidelines of the app is maintained.</li>
+                      </ul>
+                      <li>#Node.js #GraphQL #Hasura #Express.js</li>
+                      `,
+          show: false,
+          is_last: false,
+          thumbnail: "tiyake.png",
         },
         {
           titleUp:
