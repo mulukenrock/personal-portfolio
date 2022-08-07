@@ -1,25 +1,21 @@
 <template>
-  <div id="experience">
-    <v-row class="timeline-top" align="center" justify="center">
-      <v-col cols="12" md="8" lg="8" class="px-8 px-sm-10 px-md-2 px-lg-10">
-        <h4 class="white--text my-2 mb-6 text-left">Experience / Projects</h4>
-        <div class="timeline">
-          <vue-timeline-update
-            v-for="(experience, index) in experiences"
-            :key="index"
-            @click="experience.show = !experience.show"
-            :date="experience.date"
-            :title="experience.show ? experience.titleUp : experience.titleDown"
-            :description="experience.show ? experience.description : null"
-            icon="code"
-            color="red"
-            :thumbnail="experience.thumbnail"
-            :is-last="experience.is_last"
-            :category="experience.category"
-          />
-        </div>
-      </v-col>
-    </v-row>
+  <div v-scrollanim id="experience">
+    <h4 class="white--text my-2 mb-6 text-left">Experience / Projects</h4>
+    <div class="timeline">
+      <vue-timeline-update
+        v-for="(experience, index) in experiences"
+        :key="index"
+        @click="experience.show = !experience.show"
+        :date="experience.date"
+        :title="experience.show ? experience.titleUp : experience.titleDown"
+        :description="experience.show ? experience.description : null"
+        icon="code"
+        color="red"
+        :thumbnail="experience.thumbnail"
+        :is-last="experience.is_last"
+        :category="experience.category"
+      />
+    </div>
   </div>
 </template>
 
@@ -259,5 +255,16 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.9s ease-out;
+}
+
+.enter {
+  opacity: 1;
+  transform: translateX(0px);
 }
 </style>

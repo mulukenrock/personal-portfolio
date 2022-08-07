@@ -1,20 +1,28 @@
 <template>
-  <v-app-bar color="#111111" dark flat class="pl-8 pr-xs-0 pr-sm-8" app>
-    <v-btn icon @click="scroll('home')">
-      <v-icon color="#A7121D">fas fa-sun</v-icon>
-    </v-btn>
-
+  <v-app-bar color="#111111" dark flat class="pl-sm-8 pr-xs-0 pr-sm-8" app>
+    <img
+      @click="scroll('home')"
+      src="muluken-logo.png"
+      :height="
+        $vuetify.breakpoint.xs
+          ? '26px'
+          : $vuetify.breakpoint.sm
+          ? '30px'
+          : '36px'
+      "
+      style="cursor: pointer"
+    />
     <v-spacer></v-spacer>
     <div class="hidden-sm-and-down">
       <v-btn text @click="scroll('home')">Home</v-btn>
       <v-btn text @click="scroll('about')">About</v-btn>
       <v-btn text @click="scroll('education')">Education</v-btn>
       <v-btn text @click="scroll('experience')">Experience / Projects</v-btn>
-      <v-btn text @click="scroll('tools')">Tools</v-btn>
+      <v-btn text @click="scroll('tools')" class="pr-md-0">Tools</v-btn>
     </div>
     <v-icon
       aria-label="menu icon"
-      class="hidden-md-and-up mr-10"
+      class="hidden-md-and-up"
       @click="drawer = !drawer"
       >fas fa-bars</v-icon
     >

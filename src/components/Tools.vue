@@ -1,10 +1,8 @@
 <template>
-  <div id="tools">
-    <v-row align="center" justify="center" class="mx-1">
-      <v-col cols="12">
-        <h4 class="white--text my-2 mt-6 text-center">
-          Programming Languages / Tools
-        </h4>
+  <div v-scrollanim id="tools">
+    <v-row align="center" justify="space-between" class="mx-1">
+      <v-col cols="12" class="px-0">
+        <h4 class="white--text my-2 mt-6">Programming Languages / Tools</h4>
       </v-col>
       <Logo
         src="https://img.icons8.com/color/96/000000/vue-js.png"
@@ -17,6 +15,10 @@
       <Logo
         src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-dark.svg"
         name="Vuetify"
+      />
+      <Logo
+        src="quasar.png"
+        name="Quasar"
       />
       <Logo src="hasura.png" name="Hasura" />
       <Logo
@@ -50,12 +52,13 @@
         name="TypeScript"
       />
       <Logo src="https://img.icons8.com/color/96/000000/git.png" name="Git" />
+      <Logo src="tailwindcss.png" name="Tailwind CSS" />
+      <Logo src="sass.png" name="Sass" />
       <Logo
         src="https://img.icons8.com/color/96/000000/html-5.png"
         name="HTML"
       />
       <Logo src="https://img.icons8.com/color/96/000000/css3.png" name="CSS" />
-      <Logo src="tailwindcss.png" name="Tailwind CSS" />
       <Logo
         src="https://img.icons8.com/color/96/000000/heroku.png"
         name="Heroku"
@@ -86,3 +89,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.before-enter {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all .9s ease-out;
+}
+
+.enter {
+  opacity: 1;
+  transform: translateX(0px);
+}
+</style>

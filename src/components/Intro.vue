@@ -1,13 +1,14 @@
 <template>
   <v-col
     cols="12"
-    sm="6"
-    md="5"
-    lg="4"
-    class="text-sm-left text-center px-3 px-sm-0 px-md-3"
+    sm="7"
+    md="6"
+    lg="7"
+    class="text-sm-left text-center pl-sm-8 px-lg-16"
+    v-scrollanim
   >
-    <h5 class="red--text text--darken-1 title font-weight-bold">
-      Hey, I'm Muluken
+    <h5 class="text--darken-1 title font-weight-bold lighter">
+      Hey, I'm Muluken Getachew
     </h5>
     <vue-typer
       :text="[
@@ -19,34 +20,36 @@
       eraseStyle="backspace"
       :eraseDelay="20"
     ></vue-typer>
-    <p class="grey--text pr-lg-15">
+    <p class="grey--text pr-lg-4">
       A fullstack developer specializing in Vue.js, Node.js, Express.js, HASURA,
       and Nuxt.js!
       <br />
       <br />
       4 years of overall experience!
     </p>
-    <v-btn
-      v-for="(icon, index) in icons"
-      :key="index"
-      class="mr-4 text-left mb-4"
-      icon
-    >
-      <v-tooltip
-        bottom
-        color="white"
-        content-class="font-weight-bold red--text"
+    <div class="contact-details">
+      <v-btn
+        v-for="(icon, index) in icons"
+        :key="index"
+        class="mr-4 text-left mb-4 icons"
+        icon
       >
-        <template v-slot:activator="{ on }">
-          <a :href="icon.link" target="_blank" rel="noopener noreferrer">
-            <v-icon v-on="on" size="24px" color="red" class="text-left zoom">{{
-              icon.image
-            }}</v-icon>
-          </a>
-        </template>
-        <span>{{ icon.name }}</span>
-      </v-tooltip>
-    </v-btn>
+        <v-tooltip
+          bottom
+          color="white"
+          content-class="font-weight-bold tooltip-txts text-left"
+        >
+          <template v-slot:activator="{ on }">
+            <a :href="icon.link" target="_blank" rel="noopener noreferrer">
+              <v-icon v-on="on" size="24px" class="zoom">{{
+                icon.image
+              }}</v-icon>
+            </a>
+          </template>
+          <span>{{ icon.name }}</span>
+        </v-tooltip>
+      </v-btn>
+    </div>
     <div>
       <a :href="cv" target="_blank" rel="cv">
         <v-btn rounded color="#a7121d" dark>
@@ -96,7 +99,16 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
+.zoom {
+  color: #dc1826 !important;
+}
+.lighter {
+  color: #dc1826;
+}
+.tooltip-txts {
+  color: #dc1826
+}
 .zoom:hover {
   transform: scale(1.5);
 }
@@ -120,5 +132,24 @@ a {
 .vue-typer .custom.caret {
   width: 1.5px;
   background-color: #fff;
+}
+.contact-details .icons:last-of-type {
+  margin-right: 0 !important;
+}
+@media only screen and (min-width: 600px) {
+  .contact-details .icons {
+    justify-content: start !important;
+  }
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .9s ease-out;
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0px);
 }
 </style>
