@@ -1,0 +1,31 @@
+$p: .5em;
+$o: 1.25em;
+$l: 0.375em;
+
+
+.normalpic {
+	--c: #{mix(#111, #a7121d, 10%)};
+	--s0: calc(#{$o} + #{$l});
+	--s1: calc(#{$o} + #{$l} + #{$p});
+	place-self: center;
+	position: relative;
+	width: 100%;
+	border-top: solid 0 transparent;
+	border-right: solid 0 transparent;
+	border-bottom: solid 0 transparent;
+	border-left: solid 0 transparent;
+	border-width: 0 0 0 0;
+	background: var(--c) padding-box;
+	
+	&::before {
+		top: 0; left: 0;
+		border: inherit;
+		border-width: $o;
+		width: 100%; 
+		height: 95%;
+		box-shadow: inset 0 0 12px 5px var(--c);
+		mix-blend-mode: difference;
+		pointer-events: none;
+		content: ''
+	}
+}

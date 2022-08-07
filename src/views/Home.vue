@@ -4,19 +4,46 @@
     :style="{ background: $vuetify.theme.themes.dark.background }"
   >
     <NavBar />
-    <div class="progress-bar" :style="{ width: progressPercent }"></div>
+    <div class="progress-bar" :style="{ width: `${progressPercent}%` }"></div>
     <v-container>
-      <v-row justify="center" align="center">
-        <MainPic />
-        <Intro />
-        <v-col cols="12" class="padd">
+      <v-row justify="center" align="center" class="px-4">
+        <v-col cols="12" md="10" lg="8" class="text-left">
+          <v-row justify="center" align="center">
+            <MainPic />
+            <Intro />
+          </v-row>
+        </v-col>
+        <v-col cols="12" md="10" lg="8" class="text-left">
           <About />
+        </v-col>
+        <v-col cols="12" md="10" lg="8">
           <Education />
+        </v-col>
+        <v-col cols="12" md="10" lg="8">
           <Experience />
+        </v-col>
+        <v-col cols="12">
           <Tools />
         </v-col>
       </v-row>
     </v-container>
+    <v-fab-transition>
+      <v-btn
+        class="mr-3"
+        elevation="21"
+        fab
+        bottom
+        right
+        color="#a7121d"
+        fixed
+        dark
+        :small="$vuetify.breakpoint.xs"
+        @click="$vuetify.goTo('#home')"
+        v-show="progressPercent > 15"
+      >
+        <v-icon>mdi-chevron-up</v-icon>
+      </v-btn>
+    </v-fab-transition>
     <Footer />
   </v-app>
 </template>
@@ -68,7 +95,12 @@ export default {
   },
   data() {
     return {
-      progressPercent: "0%",
+      progressPercent: 0,
+      goToOptions: {
+        duration: 1000,
+        offset: 0,
+        easing: "easeInOutCubic",
+      },
     };
   },
   methods: {
@@ -78,8 +110,7 @@ export default {
       let height =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-      let scrolled = (scrollPos / height) * 100;
-      this.progressPercent = `${scrolled}%`;
+      this.progressPercent = (scrollPos / height) * 100;
     },
     async post_visit() {
       try {

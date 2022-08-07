@@ -6,7 +6,9 @@ import vuetify from "./plugins/vuetify";
 import VueTimeline from "@growthbunker/vuetimeline";
 import VueMeta from "vue-meta";
 import VueTyper from "vue-typer";
+import ScrollAnim from "./directives/scrollanimation";
 
+Vue.directive("scrollanim", ScrollAnim);
 Vue.use(VueTyper);
 Vue.use(VueTimeline);
 
