@@ -85,7 +85,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://imgur.com/a/5hBD6KC",
+        content: "https://i.imgur.com/VrUUsPf.jpg",
       },
       {
         hid: "og:url",
