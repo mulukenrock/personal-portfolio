@@ -26,21 +26,83 @@ export default {
       experiences: [
         {
           titleUp:
+            "Full-Stack Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Full-Stack Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2022-09-12"),
+          description: `
+                      <a target='_blank' alt='Cropconex' rel='noopener noreferrer' style='text-decoration: none'>
+                        <b style='color: #a7121d'>Company: CropConex</b>
+                      </a>
+                      <br />
+                      <br />
+                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
+                        <b style='color: #e2e2e2'>#Project: Cropconex</b> 
+                      </a>
+                      <ul style='color: grey'>
+                        <b>September 2022 - Present</b>
+                        <li>CropConex simplifies coffee commodities contracts, global supply chain management, and international payments so you can streamline logistics and trade with confidence.</li>
+                        <li>With CropConex, you can : </li>
+                        <ul>
+                          <li>Register coffee harvests from growers and field workers. Record the source, weight, price, variety, certifications, and more.</li>
+                          <li>Group harvests into lots, track processing across drying beds, and record weight loss over time.</li>
+                          <li>Assess the physical and sensory quality of your coffee according to industry standards or link analyses of third-party graders.</li>
+                          <li>Have easy access to green coffee stock levels helps forecast production planning. Gain full visibility of stock in and out across warehouses. Link lots to harvests, samples, and sales records.</li>
+                          <li>Sell coffee to your existing buyers using CropConex contract management tools or find new buyers by listing coffees publicly in the Marketplace.</li>
+                          <li>Request logistics support to compare costs across sea and air freight providers or share your coffee order details to your existing providers directly through the platform.</li>
+                          <li>Enjoy the freshest coffee on the market and rate your experience of supplier communication and coffee quality and share feedback with each sale.</li>
+                        </ul>
+                      </ul>
+                      <li>#Vue.js #Node.js #Nuxt.js #GraphQL #Jira #ApolloClient #JWT #PostgreSQL #Express.js </li>
+                      `,
+          show: true,
+          is_last: false,
+          category: "Current",
+          thumbnail: "cropconex.png",
+        },
+        {
+          titleUp:
+            "Front End Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
+          titleDown:
+            "Front End Developer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
+          date: new Date("2022-07-18"),
+          description: `
+                      <a target='_blank' alt='Chatfully LLC' rel='noopener noreferrer' style='text-decoration: none'>
+                        <b style='color: #a7121d'>Company: Chatfully LLC</b>
+                      </a>
+                      <br />
+                      <br />
+                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
+                        <b style='color: #e2e2e2'>#Project: Chatfully</b> 
+                      </a>
+                      <ul style='color: grey'>
+                        <b>July 2022 - December 2022</b>
+                        <li>Chatfully unifies customer messages and automate follow-up with an omnichannel chat tool that an entire team can use.</li>
+                        <li>With Chatfully, you can centralize communication in team inboxes, chat at scale, and follow-up with opportunities faster.</li>
+                      </ul>
+                      <li>#Quasar #Vue.js #Javascript #Clickup </li>
+                      `,
+          show: false,
+          is_last: false,
+          thumbnail: "chatfully.png",
+        },
+        {
+          titleUp:
             "Senior Software Engineer &nbsp;&nbsp; <i class='fa-solid fa-chevron-up'></i>",
           titleDown:
             "Senior Software Engineer &nbsp;&nbsp; <i class='fa-solid fa-chevron-down'></i>",
           date: new Date("2021-05-10"),
           description: `
-                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
+                      <a target='_blank' alt='OrbitHealth Inc' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #a7121d'>Company: Orbit Inc.</b>
                       </a>
                       <br />
                       <br />
-                      <a target='_blank' alt='Gebere' rel='noopener noreferrer' style='text-decoration: none'>
+                      <a target='_blank' alt='OrbitHealth Inc' rel='noopener noreferrer' style='text-decoration: none'>
                         <b style='color: #e2e2e2'>#Project: Orbit 2.0</b> 
                       </a>
                       <ul style='color: grey'>
-                        <b>May 2021 - Present</b>
+                        <b>May 2021 - September 2022</b>
                         <li>Orbit 2.0 is a health care management system that automates almost every action of a healthcare facility.</li>
                         <li>It's a very big project and has 6 modules, namely:
                           <ul>
@@ -65,10 +127,9 @@ export default {
                         <li>Whichever healthcare facility residing anywhere in the world can use this app on the cloud.</li>
                       </ul>
                       `,
-          show: true,
+          show: false,
           is_last: false,
           thumbnail: "orbit-health.png",
-          category: "Current",
         },
         {
           titleUp:
@@ -113,7 +174,7 @@ export default {
                         <b style='color: #e2e2e2'>#Project: Ekub</b> 
                       </a>
                       <ul style='color: grey'>
-                        <b>May 2021 - Present</b>
+                        <b>May 2021 - November 2022</b>
                         <li>Ekub is an Ethiopian ROSCA(rotating savings and credit association) system. </li>
                         <li>It has specific rules and guidelines. People will gather in groups to save money weekly, monthly, or annually.</li> 
                         <li>There's a lot drawn on specific dates and it will be allotted to one of the group members.</li>
