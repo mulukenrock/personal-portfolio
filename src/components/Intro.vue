@@ -25,7 +25,7 @@
       and Nuxt.js!
       <br />
       <br />
-      4 years of overall experience!
+      {{ yearsOfExperience }} years of overall experience!
     </p>
     <div class="contact-details">
       <v-btn
@@ -65,6 +65,12 @@
 
 <script>
 export default {
+  async created() {
+    const currentDate = await this.$fetchDate();
+    const currentYear = currentDate.getFullYear();
+
+    this.yearsOfExperience = currentYear - this.professionalExpStart;
+  },
   data() {
     return {
       cv: process.env.VUE_APP_CV_URL,
@@ -95,6 +101,8 @@ export default {
           link: "https://stackoverflow.com/users/14529454/ambassel",
         },
       ],
+      professionalExpStart: 2019,
+      yearsOfExperience: 5,
     };
   },
 };
@@ -107,7 +115,7 @@ export default {
   color: #dc1826;
 }
 .tooltip-txts {
-  color: #dc1826
+  color: #dc1826;
 }
 .zoom:hover {
   transform: scale(1.5);
@@ -145,7 +153,7 @@ a {
 .before-enter {
   opacity: 0;
   transform: translateY(100px);
-  transition: all .9s ease-out;
+  transition: all 0.9s ease-out;
 }
 
 .enter {
