@@ -1,5 +1,7 @@
 {
+  "author": "Muluken Getachew",
   "name": "portfolio",
+  "description": "Muluken Getachew's personal portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
