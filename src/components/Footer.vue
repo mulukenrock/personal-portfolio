@@ -38,7 +38,7 @@
             <v-btn class="mx-1 white--text" icon>
               <v-icon color="#A7121D">mdi-account</v-icon>
             </v-btn>
-            Muluken Getachew &copy; 2022
+            Muluken Getachew &copy; {{ copyrightYear }}
           </v-card-text>
         </v-col>
       </v-row>
@@ -47,7 +47,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      copyrightYear: 2024
+    }
+  },
+  async created() {
+    const copyrightDate = await this.$fetchDate();
+    this.copyrightYear = copyrightDate.getFullYear();
+  },
+};
 </script>
 
 <style></style>
