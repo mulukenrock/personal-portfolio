@@ -1,4 +1,4 @@
-# portfolio
+# Muluken's Portfolio
 
 ## Project setup
 ```

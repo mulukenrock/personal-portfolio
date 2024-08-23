@@ -40,7 +40,7 @@ export default {
                         <b style='color: #e2e2e2'>#Project: Cropconex</b> 
                       </a>
                       <ul style='color: grey'>
-                        <b>September 2022 - Present</b>
+                        <b>September 2022 - July 2024</b>
                         <li>CropConex simplifies coffee commodities contracts, global supply chain management, and international payments so you can streamline logistics and trade with confidence.</li>
                         <li>With CropConex, you can : </li>
                         <ul>

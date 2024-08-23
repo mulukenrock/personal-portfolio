@@ -16,15 +16,17 @@
         src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-dark.svg"
         name="Vuetify"
       />
-      <Logo
-        src="quasar.png"
-        name="Quasar"
-      />
-      <Logo src="hasura.png" name="Hasura" />
+      <Logo src="quasar.png" name="Quasar" />
       <Logo
         src="https://img.icons8.com/fluency/96/000000/node-js.png"
         name="Node.Js"
       />
+      <Logo
+        :customStyle="{ background: '#fff' }"
+        src="expressjs-icon.png"
+        name="Express.js"
+      />
+      <Logo src="hasura.png" name="Hasura" />
       <Logo src="https://img.icons8.com/color/2x/graphql.png" name="GraphQL" />
       <Logo
         src="https://img.icons8.com/color/96/000000/postgreesql.png"
@@ -39,11 +41,6 @@
         name="Docker"
       />
       <Logo
-        :customStyle="{ background: '#fff' }"
-        src="expressjs-icon.png"
-        name="Express"
-      />
-      <Logo
         src="https://img.icons8.com/color/96/000000/javascript.png"
         name="JavaScript"
       />
@@ -51,9 +48,18 @@
         src="https://img.icons8.com/color/96/000000/typescript.png"
         name="TypeScript"
       />
+      <Logo src="svelte-icon.png" name="Svelete" />
       <Logo src="https://img.icons8.com/color/96/000000/git.png" name="Git" />
       <Logo src="tailwindcss.png" name="Tailwind CSS" />
+      <Logo src="golang.png" name="Go" />
       <Logo src="sass.png" name="Sass" />
+      <Logo src="sequelizejs-icon.svg" name="Sequelize" />
+      <Logo
+        :customStyle="{ background: '#fff' }"
+        src="prisma.png"
+        name="Prisma"
+      />
+      <Logo src="jest-js.png" name="Jest(Testing)" />
       <Logo
         src="https://img.icons8.com/color/96/000000/html-5.png"
         name="HTML"
@@ -94,7 +100,7 @@ export default {
 .before-enter {
   opacity: 0;
   transform: translateX(100px);
-  transition: all .9s ease-out;
+  transition: all 0.9s ease-out;
 }
 
 .enter {
