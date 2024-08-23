@@ -53,11 +53,11 @@ export default {
                           <li>Enjoy the freshest coffee on the market and rate your experience of supplier communication and coffee quality and share feedback with each sale.</li>
                         </ul>
                       </ul>
-                      <li>#Vue.js #Node.js #Nuxt.js #GraphQL #Jira #ApolloClient #JWT #PostgreSQL #Express.js </li>
+                      <li>#Vue.js #Node.js #Nuxt.js #GraphQL #Jira #ApolloClient #JWT #PostgreSQL #Express.js #Retool</li>
                       `,
           show: true,
           is_last: false,
-          category: "Current",
+          category: "Latest",
           thumbnail: "cropconex.png",
         },
         {
